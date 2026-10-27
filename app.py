@@ -37,6 +37,11 @@ pages = {
 }
 nav = st.navigation(pages)
 
+# Keep the sidebar choices when moving between pages.
+for _k in ("mode", "replay_choice", "replay_date", "replay_time"):
+    if _k in st.session_state:
+        st.session_state[_k] = st.session_state[_k]
+
 st.logo(str(ROOT / "assets" / "logo.svg"), size="large", icon_image=str(ROOT / "assets" / "icon.svg"))
 
 with st.sidebar:
@@ -48,10 +53,12 @@ with st.sidebar:
         choice = st.selectbox("Moment", list(REPLAYS), key="replay_choice")
         at = REPLAYS[choice]
         if at is None:
+            st.session_state.setdefault("replay_date", pd.Timestamp("2026-09-21").date())
+            st.session_state.setdefault("replay_time", pd.Timestamp("2026-09-21 09:00").time())
             c1, c2 = st.columns(2)
-            d = c1.date_input("Date", value=pd.Timestamp("2026-09-21").date(),
-                              min_value=pd.Timestamp("2025-11-25").date(), max_value=pd.Timestamp("2026-10-23").date())
-            h = c2.time_input("Time", value=pd.Timestamp("2026-09-21 09:00").time(), step=3600)
+            d = c1.date_input("Date", min_value=pd.Timestamp("2025-11-25").date(),
+                              max_value=pd.Timestamp("2026-10-23").date(), key="replay_date")
+            h = c2.time_input("Time", step=3600, key="replay_time")
             at = pd.Timestamp.combine(d, h)
         st.session_state["replay_at"] = pd.Timestamp(at).floor("h")
     else:
