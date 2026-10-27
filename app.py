@@ -14,7 +14,7 @@ sys.path.insert(0, str(ROOT))
 st.set_page_config(page_title="River Flood Early Warning · Sri Lanka", page_icon="🌊",
                    layout="wide", initial_sidebar_state="expanded")
 
-from ui.common import fmt_t, load_bundle, page_css  # noqa: E402
+from ui.common import fmt_t, page_css  # noqa: E402
 from src.live import ARCHIVE_REPO  # noqa: E402
 
 page_css()
@@ -61,12 +61,5 @@ with st.sidebar:
         if st.button("Check for new readings", icon=":material/refresh:", width="stretch"):
             st.cache_data.clear()
             st.rerun()
-    b = load_bundle()
-    if b is not None:
-        st.divider()
-        st.html('<div class="smalllabel">Predicts which river gauges will reach flood level within the next '
-                '6 hours, from Irrigation Department water levels.</div>')
-        st.html(f'<div class="smalllabel">Model: {b["model_name"]} · warning threshold {b["threshold"]:.3f}<br>'
-                f'Trained on readings before {b["trained_until"]}</div>')
 
 nav.run()
