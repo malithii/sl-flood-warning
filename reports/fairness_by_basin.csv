@@ -1,0 +1,19 @@
+basin,stations,development new-flood hours,test new-flood hours,test flood onsets,onsets warned ≥1 h,onsets warned ≥3 h,recall (hours),false alarms per station-day
+Aththanagalu Oya,1,18,0,0,,,,0.461
+Deduru Oya,1,6,0,0,,,,0.024
+Gin Ganga,2,0,12,2,1.0,1.0,0.833,0.386
+Heda Oya,1,0,0,0,,,,0.0
+Kalu Ganga,5,46,12,2,1.0,1.0,0.667,0.243
+Kelani Ganga,7,49,35,6,1.0,0.333,0.257,0.284
+Kirindi Oya,3,24,0,0,,,,0.0
+Kumbukkan Oya,1,18,0,0,,,,0.0
+Ma Oya,1,6,0,0,,,,0.0
+Maduru Oya,1,17,0,0,,,,0.0
+Maha Oya,2,12,0,0,,,,0.036
+Mahaweli Ganga,5,36,37,5,1.0,0.4,0.486,0.124
+Malwathu Oya,1,12,0,0,,,,0.0
+Mee Oya,1,0,0,0,,,,0.0
+Menik Ganga,1,6,0,0,,,,0.0
+Nilwala Ganga,4,10,42,7,1.0,1.0,0.833,0.326
+Walawe Ganga,1,0,0,0,,,,0.012
+Yan Oya,1,6,0,0,,,,0.0

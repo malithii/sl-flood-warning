@@ -1,0 +1,9 @@
+model,CV PR-AUC,CV PR-AUC std,"threshold (F2, out-of-fold)",best params,tuning time (s)
+Logistic Regression,0.09585338889073636,0.0393604537781406,0.8759750449955637,{'logisticregression__C': np.float64(0.0017073967431528124)},10
+K-Nearest Neighbours,0.18703788950150224,0.12472762885476518,0.13861386138613863,"{'estimator__kneighborsclassifier__weights': 'uniform', 'estimator__kneighborsclassifier__n_neighbors': 101}",40
+SVM (RBF),0.1459703657617489,0.06676293792339971,-0.05247458860518169,"{'estimator__svc__gamma': 0.02, 'estimator__svc__C': 0.1}",49
+Decision Tree,0.16044622895550897,0.007587645906212117,0.9914032189338485,"{'max_depth': 13, 'min_samples_leaf': 81}",17
+Random Forest,0.3904516710565251,0.12558810923090272,0.11983108333051559,"{'min_samples_leaf': 3, 'max_features': 'sqrt', 'max_depth': None}",241
+Extra Trees,0.4836951325525803,0.04956379049813617,0.10487910181369778,"{'min_samples_leaf': 3, 'max_features': 0.5, 'max_depth': None}",77
+XGBoost,0.4370355080751464,0.09583539934235945,0.08944493532180786,"{'colsample_bytree': np.float64(0.5979914312095727), 'learning_rate': np.float64(0.022195109122206198), 'max_depth': 6, 'min_child_weight': 16, 'n_estimators': 386, 'scale_pos_weight': 5, 'subsample': np.float64(0.815876852955632)}",71
+LightGBM,0.44335042884168724,0.08936779292682856,0.026068365681527827,"{'colsample_bytree': np.float64(0.8636359979282104), 'learning_rate': np.float64(0.042420009795822076), 'min_child_samples': 234, 'n_estimators': 401, 'num_leaves': 28, 'reg_lambda': np.float64(21.984251073120507), 'scale_pos_weight': 1, 'subsample': np.float64(0.7554709158757928), 'subsample_freq': 1}",104

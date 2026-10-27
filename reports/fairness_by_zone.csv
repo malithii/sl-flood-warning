@@ -1,0 +1,3 @@
+zone,stations,development new-flood hours,test new-flood hours,test flood onsets,onsets warned ≥1 h,onsets warned ≥3 h,recall (hours),false alarms per station-day
+Dry & intermediate zone,18,131,37,5,1.0,0.4,0.486,0.036
+Wet zone (south-west),21,135,101,17,1.0,0.765,0.614,0.276
