@@ -34,14 +34,6 @@ pages = {
         st.Page("views/station.py", title="Station detail", icon=":material/location_on:"),
         st.Page("views/whatif.py", title="What-if check", icon=":material/tune:"),
     ],
-    "Model": [
-        st.Page("views/performance.py", title="How well it works", icon=":material/monitoring:"),
-        st.Page("views/explain.py", title="Why it warns", icon=":material/psychology_alt:"),
-        st.Page("views/fairness.py", title="Fairness across regions", icon=":material/balance:"),
-    ],
-    "Project": [
-        st.Page("views/about.py", title="Data and method", icon=":material/description:"),
-    ],
 }
 nav = st.navigation(pages)
 

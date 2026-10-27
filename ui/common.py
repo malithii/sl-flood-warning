@@ -148,7 +148,7 @@ def get_context():
 def page_css():
     st.html("""
 <style>
-  .block-container {padding-top: 2.2rem; max-width: 1280px;}
+  .block-container {padding-top: 5rem; max-width: 1280px;}
   h1, h2, h3 {letter-spacing: -0.01em;}
   .headline {font-size: 2.05rem; line-height: 1.2; font-weight: 600; color: #13232F; margin: 0 0 .35rem 0; max-width: 34ch;}
   .subline {color: #5B6B77; font-size: 0.98rem; margin-bottom: 1.1rem;}
